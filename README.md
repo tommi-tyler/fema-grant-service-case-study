@@ -1,76 +1,50 @@
-# fema-grant-service-case-study
 # FEMA Grant-Making Service Design Case Study
-
-## Jump Links
-
-- [Executive Summary](#executive-summary)
-- [Visual Summary](#visual-summary)
-- [Service Design Storyboard](#service-design-storyboard)
-- [My Role](#my-role)
-- [The Problem](#the-problem)
-- [Key Insight](#key-insight)
-- [Before → After](#before--after)
-- [Data Product Perspective: Enables AI](#data-product-perspective-enables-ai)
-- [90-Day Mitigation Plan](#90-day-mitigation-plan)
-- [Change Leadership & Constraints](#change-leadership--constraints)
-- [Why This Matters](#why-this-matters)
-- [Takeaway](#takeaway)
 
 ## Executive Summary
 
-This case study examines a federal grant-making platform intended to function as a centralized service across multiple programs, including Public Assistance, Mitigation, and Preparedness.
+This case study examines a federal grant-making platform intended to support multiple programs, including Public Assistance, Mitigation, and Preparedness.
 
-The initial effort focused on improving **application consistency**. Through service design analysis, a deeper issue emerged:
+The work began as an effort to improve application consistency. Through service design analysis, a deeper issue emerged:
 
-> **The system improved the interface, but not the data or grant-making capability.**
+> The system improved the interface, but not the data or grant-making capability.
 
-By reframing the problem toward **data interoperability and service outcomes**, this work identifies a path to reduce burden, improve decision-making, and support national preparedness goals.
-
----
-
-## Visual Summary
-
-The visual below shows the proposed service model, highlighting the centralized applicant/project record, program overlays, and the shift from application-centric workflows to reusable service data.
-
-![Service Model](./fema_service_artifact_aligned_script.svg)
-*Service model visual: centralized service design and data reuse across programs.*
+By reframing the problem around data interoperability, service outcomes, and cross-program reuse, this work identifies a path to reduce burden, improve review confidence, and strengthen oversight.
 
 ---
 
-## Service Design Storyboard
+## Where This Started
 
-This storyboard captures the current service-delivery journey and the opportunity to shift from a UI-driven experience toward a data-centered service.
+The platform was designed around structured application workflows.
 
-![Service Design Storyboard](./service_design_storyboard.svg)
-*Storyboard: applicant journey through application forms, program silos, review complexity, and the redesigned service model.*
+On the surface, the experience appeared organized. Navigation was clear, sections were defined, and some data could be pulled from authoritative systems.
 
-### Visual Dialogue & Executive Talk Track
+![SAM.gov organization profile integration](./Screenshot%202026-04-29%20at%205.30.30%E2%80%AFPM.png)
 
-Use the graphic narration to make the contrast clear:
+But the structure had limits. Users still moved through program-specific workflows, validated information that already existed elsewhere, and relied on separate steps before work could proceed.
 
-- **The Legacy Trap:** "We cannot see if the data answers your questions until we build the interface." 
-  - Data label: *Disconnected Silos = Zero Intelligence.*
-- **The AI Revolution:** "We secure the data foundation first. The AI answers the mission needs immediately." 
-  - Data label: *Unified Data Layer = Instant ROI.*
+![Applicant information form](./Screenshot%202026-04-29%20at%205.29.03%E2%80%AFPM.png)
 
-When presenting this slide, lead with these points:
+When the system could not capture structured data, it fell back to attachments, spreadsheets, and manual interpretation.
 
-- **The Setup:** "Leaders face a critical choice in how we modernize grant systems. We can continue down the legacy road of UI-first delivery, or we can pivot to a data-first AI architecture."
-- **The Problem:** "The left side shows the current industry trap. We spend 18 months or more gathering requirements, drawing screens, and building manual workflows. Data is treated as a mere byproduct that falls out at the very end of the pipeline. We do not know if the system can answer higher-value oversight questions until we launch it. That is high-risk, high-cost, and creates more data silos."
-- **The Solution:** "The right side is our future state. We do not start with forms. We start with the data. By building a unified data layer first, we feed the mission rules directly into an AI core. Instantly, we unlock automated risk flagging, mission impact visibility, and the ability to answer sudden Congressional queries. The system builds itself around the data, not the other way around."
-- **The Close:** "If we want to act as a shared service for other agencies, we must stop building forms. We must start delivering outcomes. This architecture is how we do it."
+![Application attachments and uploads](./Screenshot%202026-04-29%20at%205.28.32%E2%80%AFPM.png)
 
-Would you like to turn this into a short video script or a one-page executive summary handout?
+The interface was improving. The service was not.
 
-### Policy & Service Alignment
+---
 
-This case study is grounded in federal service and data requirements that shape FEMA program delivery:
+## Where It Breaks
 
-- **GPRA Modernization Act of 2010:** Mandates quarterly performance assessments to ensure mission goals are actively measured and met.
-- **Open Data Policy (M-13-13):** Directs FEMA to manage information as a continuous asset and publish open, machine-readable data for transparency.
-- **Paperwork Reduction Act:** Requires public comment and OMB approval before collecting customer satisfaction survey data used to improve program delivery.
+The pattern became clear:
 
-These mandates reinforce the need for a service model that supports reliable data, measurable outcomes, and reduced burden.
+- Data existed, but was not connected
+- Information was captured, but not reusable
+- Workflows were defined, but not interoperable
+- Review depended on manual interpretation
+- Reporting required reconciliation outside the system
+
+**The system was designed to complete applications. It was not designed to manage grant data.**
+
+This matters because grant-making systems do not only need to support form submission. They need to support funding decisions, oversight, reporting, audit readiness, and national preparedness outcomes.
 
 ---
 
@@ -78,211 +52,159 @@ These mandates reinforce the need for a service model that supports reliable dat
 
 **Service Design Lead**
 
-I worked across product, engineering, program, and policy stakeholders to identify gaps, secure buy-in, and shape a prototype path that aligned service design with product performance.
+I worked across product, engineering, program, and policy stakeholders to surface gaps in data structure and workflow design, align teams around a more unified service direction, and shape a prototype path grounded in reusable, structured data.
 
-- Identified **systemic service gaps** across application, review, and funding workflows
-- Secured stakeholder buy-in and aligned the effort with **product performance metrics** and mission outcomes
-- Led design for a prototype built on **"collect once, reuse everywhere"** principles
-- Led **user research planning and synthesis** with applicants, program staff, and grants managers
-- Directed **contractor design reviews** and aligned design work to service outcomes
-- Translated insights into **backlog priorities, ticket grooming, and delivery strategy**
-- Framed the initiative as a better employee experience: reduced time, increased happiness, and greater confidence
-- Navigated product, engineering, and policy constraints to move work forward
+This included:
 
----
-
-## The Problem
-
-The system aimed to standardize the application experience across programs.
-
-Due to program complexity and eligibility variability:
-
-- Applications were rebuilt or reconfigured annually through a workbook-driven model
-- Users re-entered similar data across programs
-- Unstructured fields and attachments were used as workarounds for program variability
-- Program workflows remained siloed
-- Data was not interoperable across programs
-
-**Result:**  
-Consistent interface, but inconsistent and non-reusable data.
+- Mapping applicant, reviewer, and program workflows
+- Identifying duplication across application, review, funding, and reporting processes
+- Translating research and stakeholder input into service design priorities
+- Connecting design decisions to product performance and mission outcomes
+- Framing the problem as a service and data challenge, not a screen design issue
+- Supporting a prototype direction based on “collect once, reuse everywhere” principles
 
 ---
 
 ## Key Insight
 
-> **Consistent interface ≠ consistent data**
+> Consistent interface does not mean consistent service.
 
-Workarounds for variability increased:
+The application experience could look unified while the underlying data remained fragmented.
 
-- Applicant burden
-- Manual review effort
-- Data inconsistency
-- Risk in funding and oversight decisions
+That fragmentation increased burden for applicants, staff, and leaders:
 
-Oversight findings reinforce the pattern: disparate systems, limited interoperability, labor-intensive manual processes, and limited cross-program reporting capability.
-
----
-
-## Before → After
-
-### Before: Current State
-
-This storyboard shows the current service-delivery experience before the data-centered shift.
-
-1. **Applicant begins the process** with a form built around a specific program application.
-2. **Context is lost between programs** as the user moves from one application to the next.
-3. **The same information is re-entered repeatedly,** because each program workbook creates its own silo.
-4. **Review teams work from unstructured inputs and attachments,** generating manual interpretation and extra effort.
-5. **Oversight is fragmented,** because the data is not reusable or connected across the service.
-6. **Staff spend hours reconciling Excel dashboards and manual exports** instead of trusting a single system of record.
-
-**Impact:**
-
-- Increased review time
-- Inconsistent data quality
-- Limited oversight visibility
-- Reduced confidence in cross-program reporting
-- Delayed decisions caused by dashboard reconciliation
+- Applicants re-entered similar information across programs
+- Staff interpreted attachments and reconciled spreadsheets
+- Program teams maintained separate configurations
+- Leadership lacked a reliable view across projects, funding, and outcomes
 
 ---
 
-### After: Service Design Direction
+## The Shift
 
-- Data-centered service model
-- Single **applicant + project record**
-- Structured, reusable data across programs
-- Program overlays instead of separate applications
-- Reduced reliance on unstructured inputs
-- Integration with authoritative data sources where reliable
-- A trusted system of record that replaces Excel dashboard reconciliation
-- National outcomes tracking that supports confident performance measurement
+![UI-first delivery compared with data-first architecture](./image_e62f8c9b%20(5).png)
 
-**Impact:**
+The traditional model starts with the interface: requirements, forms, workflows, and then data.
 
-- Reduced duplicate entry and rework
-- Reduced manual review effort
-- Improved data consistency
-- Increased cross-program visibility
-- Faster decisions and more confident outcomes
-- Better support for oversight and decision-making
+That creates a risk. By the time the system needs to answer oversight, reporting, or performance questions, the data may already be fragmented.
+
+The proposed shift starts with the data:
+
+- What information must be captured?
+- What needs to be reused?
+- What should connect across programs?
+- What decisions should the system support?
+
+Once the data is structured, workflows, reporting, and future automation become easier to sustain.
 
 ---
 
-## UI-First Design vs Data Product Model
+## Workflow Comparison
 
-The current delivery model often begins with the interface, which can make the experience appear improved while leaving the underlying service and data architecture unchanged. This comparison shows why shifting to a data-first model is the better path for grant-making service outcomes.
+![Grant service workflow storyboard](./image_cd040e51.png)
 
-*Data product visual: how structured data enables reusable service layers and AI-enabled decision support.*
+The storyboard shows the difference between the current experience and the future service direction.
 
-### Current UI-First Model
+The current state is application-centered. Users complete program-specific forms, attach supporting documents, and rely on staff to interpret and reconcile information.
 
-**UI → Form → Unstructured Data → Manual Review → Limited Insight**
-
-### Future Data Product Model
-
-**Structured Data → Reusable Data Layer → Grant-Making Service → AI-Enabled Decision Support**
-
-> AI is not the starting point. It is enabled by structured, reliable data.
+The future state is service-centered. A shared applicant and project record supports program-specific requirements without creating separate data silos.
 
 ---
 
-## 90-Day Mitigation Plan
+## The Core Change
 
-**Objective:** Improve mitigation grant-making capability through targeted, data-centered changes.
+The shift is from program-based applications to a shared project record.
 
-### Phase 1 — Diagnose & Align
+![Single record grant model](./single-record-grant-model.svg)
 
-- Map mitigation workflows for HMGP / BRIC
-- Identify duplication and data gaps
+Instead of rebuilding applications for each program:
+
+- A single project record captures core data
+- Programs apply their own rules as overlays
+- Data is reused across workflows
+- Reporting comes from a shared foundation
+- Oversight becomes part of the service, not an afterthought
+
+This supports consistency without forcing every program into the same workflow.
+
+---
+
+## Service Design Direction
+
+The future model centers on reusable service data.
+
+### Before
+
+- Program-specific applications
+- Repeated data entry
+- Workbook-driven configuration
+- Unstructured attachments
+- Manual review and reconciliation
+- Fragmented reporting
+
+### After
+
+- Shared applicant and project record
+- Structured reusable data
+- Program overlays
+- Reduced manual interpretation
+- Connected review workflows
+- More reliable reporting and oversight
+
+---
+
+## What Changes
+
+- Reduced duplicate data entry
+- Reduced reliance on attachments and manual interpretation
+- Improved consistency across programs
+- Increased visibility into funding and outcomes
+- Faster, more confident decision-making
+- Better support for audit readiness and oversight
+
+The improvement is not only in usability. It is in how the grant-making service performs.
+
+---
+
+## 90-Day Mitigation Pilot
+
+A focused pilot would validate the model within one mitigation workflow, such as property-level projects or buyouts.
+
+### Phase 1: Diagnose and Align
+
+- Map the current mitigation workflow
+- Identify duplicate data entry and manual review points
 - Audit unstructured fields, attachments, and workbook-driven configurations
-- Align stakeholders on the top service and data opportunities
+- Align stakeholders on the highest-value data opportunities
 
-### Phase 2 — Pilot Improvements
+### Phase 2: Prototype the Shared Record
 
-- Define a minimum viable data model for mitigation projects
-- Reduce unstructured inputs and attachments where structured fields can work
-- Pilot within one mitigation workflow, such as property-level projects or buyouts
-- Add backlog items for pre-population, validation, and reuse
+- Define a minimum viable project data model
+- Identify fields that can be reused across workflows
+- Reduce unstructured inputs where structured fields are possible
+- Add validation, pre-population, and reuse requirements to the backlog
 
-### Phase 3 — Scale & Enable
+### Phase 3: Test and Scale
 
-- Expand reuse across workflows
-- Enable basic cross-project reporting
-- Demonstrate reduced review effort and improved visibility
-- Position the model for future AI-enabled validation, triage, and decision support
-
----
-
-## Change Leadership & Constraints
-
-### Challenges
-
-- Inconsistent data models across programs and legacy systems
-- Resistance to change and ownership dynamics
-- Culture of limited data sharing across program boundaries
-- Product backlog focused on application-level improvements rather than service transformation
-- Engineering focus on delivery and infrastructure rather than service/data outcomes
-- Limited resources with AI product and data strategy expertise
-- External data reliability constraints, including variability in SAM.gov data quality
-- Private sector reuse of federal data without strong accountability or feedback loops
-
-### Approach
-
-- Align the solution to **SES-level priorities**: oversight, accountability, transparency, and outcomes
-- Position the work as a **leadership capability**, not a design critique
-- Introduce incremental change through pilots rather than a full system redesign
-- Tie developer efficiency to better data structures and reduced annual rework
-- Build the data foundation before introducing advanced AI capabilities
+- Test whether the model reduces review effort
+- Measure data quality and reporting confidence
+- Demonstrate improved visibility across projects
+- Expand the approach across related mitigation workflows
 
 ---
 
 ## Why This Matters
 
-The system can report on activity, but struggles to answer higher-value oversight and outcome questions:
+Grant systems need to answer questions that go beyond application status:
 
-- How many projects were funded across programs?
-- Where was funding distributed?
-- What types of projects were funded?
+- What projects were funded?
+- Where did funding go?
+- What risks were reduced?
+- Which communities benefited?
 - Are national preparedness goals being met?
-- Can leadership answer Congressional data calls with confidence?
+- Can leadership answer oversight questions with confidence?
 
-These are **data interoperability and service design challenges**, not interface problems.
-
----
-
-## Full Maturity Vision: Federated National Grants Ecosystem
-
-Today, federal grant management is fractured. Systems track basic activities but fail to answer executive questions about ROI, national preparedness, and strategic impact. These are data interoperability and service design failures — not cosmetic interface issues — and isolated agency platforms cannot solve them.
-
-The future state transforms your agency from a siloed funder into the premier shared-services hub for federal grant intelligence and administration. By solving the root data challenges, we do not just fix our own oversight gaps; we create a scalable, secure utility that other struggling agencies can adopt. This eliminates redundant government spending and provides the Presidency, Congress, and the public with a single, clear picture of national investment outcomes.
-
-### The Four Pillars of Future State Success
-
-#### 1. Command-Level Visibility & Executive ROI
-
-- Today: Leaders operate in the dark, struggling to map funding to specific project types, geographies, and national preparedness goals.
-- Future State: An executive dashboard powered by pure data interoperability. Leadership can trace every dollar from Congressional appropriation to community impact in real time.
-- Success Metric: Answering a complex Congressional data call with 100% confidence in minutes, not weeks.
-
-#### 2. The Multi-Agency Shared Service Hub
-
-- Today: Peer agencies independently waste millions building redundant, subpar grant management systems that cannot communicate with one another.
-- Future State: Your agency operates as a centralized Grant Management Shared Service. Other agencies offload administrative burdens by plugging directly into your optimized infrastructure.
-- Success Metric: Reducing duplicative federal IT spend by onboarding at least two external agency partners within the first phase.
-
-#### 3. Unified Service Design for Grantees
-
-- Today: States, tribes, and local governments are drowning in the administrative burden of navigating dozens of different federal application portals.
-- Future State: A frictionless, standardized experience for fund recipients. By sharing our service design with other agencies, we create a predictable, unified front door for federal aid.
-- Success Metric: Shifting local partner focus from 60% paperwork to 90% direct community mission execution.
-
-#### 4. Continuous Compliance & Audit Readiness
-
-- Today: Agencies face high risks of improper payments and hostile Inspector General audits due to manual tracking and disconnected systems.
-- Future State: Automated compliance guardrails and standardized reporting natively built into the shared platform.
-- Success Metric: Zero high-risk audit findings across all participating partner agencies.
-
-This is full maturity: a BIG impact that leadership can confirm as a win.
+These are service design and data interoperability questions, not interface questions.
 
 ---
 
@@ -291,4 +213,4 @@ This is full maturity: a BIG impact that leadership can confirm as a win.
 > Improving the form improves the experience.  
 > Improving the grant-making system improves the outcome.
 
-This work demonstrates how service design enables **measurable, outcome-driven public sector performance** by connecting user experience, data quality, operational efficiency, oversight, and mission outcomes.
+This work reframes grant modernization from application design to service design, connecting user experience, data quality, operational efficiency, oversight, and mission outcomes.
