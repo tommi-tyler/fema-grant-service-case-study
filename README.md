@@ -18,15 +18,15 @@ The platform was designed around structured application workflows.
 
 On the surface, the experience appeared organized. Navigation was clear, sections were defined, and some data could be pulled from authoritative systems.
 
-![SAM.gov organization profile integration](./Screenshot%202026-04-29%20at%205.30.30%E2%80%AFPM.png)
+![SAM.gov organization profile integration](./001.png)
 
 But the structure had limits. Users still moved through program-specific workflows, validated information that already existed elsewhere, and relied on separate steps before work could proceed.
 
-![Applicant information form](./Screenshot%202026-04-29%20at%205.29.03%E2%80%AFPM.png)
+![Applicant information form](./002.png)
 
 When the system could not capture structured data, it fell back to attachments, spreadsheets, and manual interpretation.
 
-![Application attachments and uploads](./Screenshot%202026-04-29%20at%205.28.32%E2%80%AFPM.png)
+![Application attachments and uploads](./003.png)
 
 The interface was improving. The service was not.
 
