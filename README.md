@@ -172,7 +172,6 @@ This storyboard shows the current service-delivery experience before the data-ce
 
 The current delivery model often begins with the interface, which can make the experience appear improved while leaving the underlying service and data architecture unchanged. This comparison shows why shifting to a data-first model is the better path for grant-making service outcomes.
 
-![Data Product Model](./data_product_model_ai.svg)
 *Data product visual: how structured data enables reusable service layers and AI-enabled decision support.*
 
 ### Current UI-First Model
